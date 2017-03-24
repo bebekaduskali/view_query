@@ -53,6 +53,7 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
+ini_set('memory_limit', '256M'); 
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
 /*

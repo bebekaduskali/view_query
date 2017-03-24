@@ -17,12 +17,12 @@
                     -->
                     <span class="col-xs-2"></span>
                     <div class="col-xs-8" style="padding: 10px; border: 1px solid silver;">
-                        <form class="form-horizontal" action="<?=base_url()?>mhs/search" method="post">                                                     
+                        <form class="form-horizontal" action="<?=base_url()?>mahasiswa/search" method="post">                                                     
                                 <div class="row">    
                                     <label for="ktkunci" class="col-sm-3 control-label pad-right-zero">Kata kunci :</label>  
                                     <div class="col-sm-4">
                                                                       
-                                            <input type="text" class="form-control" name="keyword" id="ktkunci" required/>
+                                            <input type="text" class="form-control" name="keyword" id="ktkunci" autocomplete="off" required/>
                                              
                                     </div>
                                    
@@ -30,7 +30,7 @@
                             <div class="row" style="margin-top: 10px;">                          
                                     <label for="pt" class="col-sm-3 control-label pad-right-zero">Perguruan tinggi :</label>
                                 <div class="col-sm-8">
-                                        <input type="text" class="form-control" name="pt" id="pt"/> 
+                                        <input type="text" class="form-control" name="pt" autocomplete="off" id="pt"/> 
                                 </div>
                             </div>
                              <div class="row text-right" style="margin-top: 10px;">

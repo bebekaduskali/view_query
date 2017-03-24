@@ -4,11 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Mhs extends CI_Controller {
     function __construct() {
 		parent::__construct();
-        $this->load->model('mahasiswa_model', 'mahasiswa');
+       // $this->load->model('mahasiswa_model', 'mahasiswa');
     }
 
 	public function index()
 	{
+         $this->load->view('welcome_message');exit;
         $query = $this->mahasiswa->get_data_basic('erwin yulis setiawan');
         foreach($query as $row)
         {
@@ -20,7 +21,11 @@ class Mhs extends CI_Controller {
 	}
     
     public function search()
-    {  
+    {  //echo 'oke';
+        $this->load->view('welcome_message');
+        exit;
+        
+        $this->renderView('page', false);exit;
         $record = $this->input->post(); 
         if(empty($record))
         {

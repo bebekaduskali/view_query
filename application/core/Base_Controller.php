@@ -7,7 +7,7 @@ class Base_Controller extends CI_Controller
      }
     function renderView($content, $slide = false) {
     
-    //$this->view->data($this->data);
+        $this->view->data($this->data);
 
         $this->view->layout = 'layout/default';
         $this->view_items['header'] = 'layout/head';

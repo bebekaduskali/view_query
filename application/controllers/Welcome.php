@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends Base_Controller {
     function __construct() {
 		parent::__construct();
-        $this->load->model('mahasiswa_model', 'mahasiswa');
+        //$this->load->model('mahasiswa_model', 'mahasiswa');
     }
 
 	public function index()
@@ -18,6 +18,5 @@ class Welcome extends Base_Controller {
         //var_dump($query);
 		//$this->load->view('layout/content');
         $this->renderView('page', true);
-        
 	}
 }
