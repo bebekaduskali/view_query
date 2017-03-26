@@ -69,16 +69,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
-*
+*/
 $active_group = 'default';
 $query_builder = TRUE;
 
-$db['default'] = array(
+/*$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => '',
+	'username' => 'root',
 	'password' => '',
-	'database' => '',
+	'database' => 'datatables_ci',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -94,28 +94,25 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );*/
-
-$active_group = 'default';
-$active_record = TRUE;
-// $db['default']['hostname'] = "FORLAPREAL";
-$db['default']['hostname'] = "FORLAP";
-$db['default']['username'] = "erwin";
-$db['default']['password'] = 'sambaLBawang*';
-//$db['default']['username'] = "sevimaro";
-//$db['default']['password'] = 'S3mbarang123';
-//$db['default']['password'] = "S3rv3rP@ssw0rd123DIKTIDB";
-//$db['default']['database'] = "pdptSync";
-$db['default']['database'] = "pddikti_dev";
-$db['default']['dbdriver'] = "mssql";
-$db['default']['dbprefix'] = "";
-$db['default']['db_debug'] = FALSE; // kalau true akan error jika ada error db
-$db['default']['pconnect'] = FALSE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = "";
-$db['default']['char_set'] = "utf8";
-$db['default']['dbcollat'] = "utf8_general_ci";
-
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
-
+$db['default'] = array(
+	'dsn'	=> 'sqlsrv:server=FORLAP,1433;Database=pddikti_dev',
+	//'hostname' => 'FORLAP',
+	'username' => 'sevimaro',
+	'password' => 'S3mbarang123',
+	//'database' => 'pddikti_dev',
+	'dbdriver' => 'pdo',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+    'autoint' => TRUE, #tambahan saja
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
